@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fiona & Friends Pet Grooming | Loving Care for Your Pets</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Poppins', Arial, sans-serif;
+  background: #fff;
+  color: #333;
+}
+
+/* TOP PROMO BAR */
+.top-bar {
+  background: #5d7a5d;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* HEADER */
+.header {
+  background: #fff; 
+  padding: 15px 5%;
+  display: flex;
+  align-items: center; 
+  justify-content: space-between;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo {
+  color: #5d7a5d;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.btn-book-header {
+  background: #a67c52;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* HERO SECTION - CENTRALIZADO */
+.hero-container {
+  background: #5d7a5d; 
+  border-radius: 30px; 
+  overflow: hidden; 
+  position: relative;
+  min-height: 450px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.5;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  width: 90%;
+  max-width: 800px;
+}
+
+/* PULSE ANIMATION */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.section-title {
+  color: #5d7a5d;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.requirement-box {
+  background: #f9fbf9;
+  border-left: 5px solid #a67c52;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 8px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="top-bar">
+  🌿 Gentle & Professional Pet Grooming Services
+</div>
+
+<div class="header">
+  <div class="logo">🐾 Fiona & Friends</div>
+  <a href="tel:16784013444" class="btn-book-header">Call Now</a>
+</div>
+
+<div style="padding:20px;">
+  <div class="hero-container">
+    <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?q=80&w=1200" class="hero-image">
+    <div class="hero-content">
+      <h1 style="font-size: 3rem; margin:0; line-height: 1.2;">Because They Are Family</h1>
+      <p style="font-size: 1.2rem; margin-top: 15px;">Quality grooming services tailored to your pet's needs.</p>
+      <a href="tel:16784013444" style="display:inline-block; background:#a67c52; color:white; padding:18px 40px; border-radius:35px; font-weight:bold; text-decoration:none; margin-top:25px; animation: pulse 1.8s infinite; font-size: 1.1rem;">
+        Book Appointment
+      </a>
+    </div>
+  </div>
+</div>
+
+<div style="padding:20px;">
+  <h2 class="section-title">Our Services</h2>
+  <div style="display:flex; gap:20px; flex-wrap:wrap; justify-content: center; margin-top:20px;">
+    
+    <div style="background:#f8fafc; border: 2px solid #eef2f6; border-radius:25px; padding:30px; width: 300px; text-align:center;">
+      <span style="font-size:40px;">🧼</span>
+      <h3>Full Bath</h3>
+      <p>Premium <strong style="font-size:24px; color:#5d7a5d;">Care</strong></p>
+      <ul style="text-align:left; font-size:14px; list-style:none; padding:0; line-height:2;">
+        <li>✔ Deep Cleaning Shampoo</li>
+        <li>✔ Hand Blow Dry</li>
+        <li>✔ Nail Trimming</li>
+        <li>✔ Ear Cleaning</li>
+      </ul>
+    </div>
+
+    <div style="background:#5d7a5d; color:white; border-radius:25px; padding:30px; width: 300px; text-align:center; transform: scale(1.05);">
+      <span style="font-size:40px;">✂️</span>
+      <h3>Full Groom</h3>
+      <p>Custom <strong style="font-size:24px; color:#fff;">Styles</strong></p>
+      <ul style="text-align:left; font-size:14px; list-style:none; padding:0; line-height:2;">
+        <li>✔ All Bath Services</li>
+        <li>✔ Professional Haircut</li>
+        <li>✔ Sanitary Trim</li>
+        <li>✔ Scented Cologne Spray</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="requirement-box">
+  <h3>✨ Safety First</h3>
+  <p style="font-size: 14px;">At <strong>Fiona & Friends</strong>, we prioritize your pet's health. Please ensure all vaccinations are up to date before your visit. We can't wait to meet your furry friend!</p>
+</div>
+
+<div style="padding:20px;">
+  <h2 class="section-title">Find Us</h2>
+  <p style="text-align:center;">📍 6721 Broad St, Douglasville, GA 30134</p>
+  <div style="border-radius:20px; overflow:hidden; margin-top:15px; border: 1px solid #ddd; height: 350px;">
+    <iframe width="100%" height="100%" style="border:0" loading="lazy" allowfullscreen src="https://maps.google.com/?cid=1828812166436604259&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ"></iframe>
+  </div>
+</div>
+
+<div style="background:#5d7a5d; color:white; padding:40px 20px; text-align:center;">
+  <h2>Fiona & Friends</h2>
+  <p>(678) 401-3444</p>
+  <div style="margin:20px 0;">
+    <a href="#" style="color:white; margin:0 10px;">About</a>
+    <a href="#" style="color:white; margin:0 10px;">Services</a>
+    <a href="#" style="color:white; margin:0 10px;">Gallery</a>
+  </div>
+  <p style="opacity: 0.6; font-size: 12px;">© 2026 Fiona & Friends. Designed by Inovax.io</p>
+</div>
+
+</body>
+</html>
