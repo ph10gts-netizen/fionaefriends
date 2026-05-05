@@ -31,15 +31,14 @@
   .service-card { border: 2px solid #eee; border-radius: 25px; padding: 25px; margin: 20px 0; text-align: center; }
   .service-card.featured { background: var(--primary); color: #fff; border: none; }
 
-  /* MAPA ESTÁTICO SEGURO */
-  .map-container { position: relative; border-radius: 20px; overflow: hidden; border: 1px solid #ddd; margin: 0 20px 20px 20px; height: 250px; background: #eee; cursor: pointer; }
-  .map-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.05); display: flex; align-items: center; justify-content: center; color: var(--primary); font-weight: bold; text-shadow: 0 0 10px white; }
+  /* MAPA CORRIGIDO */
+  .map-wrapper { padding: 0 20px 20px 20px; }
+  .map-container { border-radius: 20px; overflow: hidden; border: 1px solid #ddd; height: 300px; background: #eee; }
 
   .footer { background: var(--primary); color: white; padding: 40px 20px; text-align: center; }
   .footer-links { margin: 20px 0; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
   .footer-links a { color: white; text-decoration: none; font-size: 14px; opacity: 0.8; font-weight: 500; }
   .footer-links a:hover { opacity: 1; }
-
 </style>
 </head>
 <body>
@@ -90,12 +89,19 @@
 <div style="text-align: center;">
   <h2 style="color:var(--primary);">Find Us</h2>
   <p>📍 6721 Broad St, Douglasville, GA</p>
-  <a href="https://www.google.com/maps/search/?api=1&query=6721+Broad+St+Douglasville+GA" target="_blank" style="text-decoration: none;">
+  <div class="map-wrapper">
     <div class="map-container">
-      <img src="https://www.mapquestapi.com/staticmap/v5/map?key=G8f9oA8Z8Z8Z8Z8Z8Z8Z8Z8Z8Z8Z8Z8Z&center=33.7514,-84.7476&zoom=15&size=600,400@2x" style="width:100%; height:100%; object-fit:cover; filter: grayscale(20%);">
-      <div class="map-overlay">📍 Click to open in Google Maps</div>
+      <iframe 
+        width="100%" 
+        height="100%" 
+        style="border:0" 
+        loading="lazy" 
+        allowfullscreen 
+        referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3320.1776997621183!2d-84.75017242429983!3d33.75149307327179!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f526437bef3023%3A0x8963fe5dd55d7963!2s6721%20Broad%20St%2C%20Douglasville%2C%20GA%2030134%2C%20EUA!5e0!3m2!1spt-BR!2sbr!4v1714935000000!5m2!1spt-BR!2sbr">
+      </iframe>
     </div>
-  </a>
+  </div>
 </div>
 
 <div class="footer">
