@@ -10,7 +10,7 @@
   :root { --primary: #5d7a5d; --secondary: #a67c52; --light: #f9fbf9; }
   body { margin: 0; font-family: 'Poppins', sans-serif; background: #fff; color: #333; overflow-x: hidden; }
   
-  /* TOP BAR MENSAGEM CURTA */
+  /* TOP BAR */
   .top-promo { background: var(--primary); color: #fff; padding: 10px; text-align: center; font-size: 13px; font-weight: 600; }
 
   /* HEADER */
@@ -30,18 +30,18 @@
   .feat-item span { font-size: 28px; display: block; margin-bottom: 5px; }
   .feat-item h4 { margin: 0; color: var(--primary); font-size: 13px; }
 
-  /* GALLERY */
-  .gallery { padding: 30px 20px; }
-  .gallery-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-  .gallery-item { border-radius: 15px; overflow: hidden; height: 130px; background: #eee; }
-  .gallery-item img { width: 100%; height: 100%; object-fit: cover; }
-
   /* VACCINATION BOX */
   .vaccine-box { background: #fff5f5; border-left: 5px solid #ff5757; padding: 20px; margin: 20px; border-radius: 12px; }
 
   /* SERVICES */
   .service-card { border: 2px solid #eee; border-radius: 25px; padding: 25px; margin: 20px 0; text-align: center; }
   .service-card.featured { background: var(--primary); color: #fff; border: none; }
+
+  /* FOOTER */
+  .footer { background: var(--primary); color: white; padding: 40px 20px; text-align: center; }
+  .footer-links { margin: 20px 0; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
+  .footer-links a { color: white; text-decoration: none; font-size: 14px; opacity: 0.8; }
+  .footer-links a:hover { opacity: 1; }
 
 </style>
 </head>
@@ -73,16 +73,6 @@
   <div class="feat-item"><span>❤️</span><h4>Stress Free</h4></div>
 </div>
 
-<div class="gallery">
-  <h2 style="text-align:center; color:var(--primary);">Our Happy Friends</h2>
-  <div class="gallery-grid">
-    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?q=80&w=400"></div>
-    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?q=80&w=400"></div>
-    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1591768575198-88dac53fbd0a?q=80&w=400"></div>
-    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1544568100-847a948585b9?q=80&w=400"></div>
-  </div>
-</div>
-
 <div class="vaccine-box">
   <h3 style="margin-top:0; color:#c53030;">✨ Safety First</h3>
   <p style="font-size: 14px; margin-bottom:0;">For everyone's health, please ensure all vaccinations are up to date before your visit. We care about your furry friend's safety!</p>
@@ -105,16 +95,29 @@
 <div style="padding: 20px; text-align: center;">
   <h2 style="color:var(--primary);">Find Us</h2>
   <p>📍 6721 Broad St, Douglasville, GA</p>
-  <div style="height: 300px; border-radius: 20px; overflow: hidden; border: 1px solid #ddd;">
-    <iframe width="100%" height="100%" style="border:0" loading="lazy" allowfullscreen 
-      src="https://www.google.com/maps/embed/v1/place?key=SUA_CHAVE_AQUI&q=Fiona+and+Friends+Pet+Grooming+Douglasville+GA">
+  <div style="height: 300px; border-radius: 20px; overflow: hidden; border: 1px solid #ddd; margin-bottom: 20px;">
+    <iframe 
+      width="100%" 
+      height="100%" 
+      frameborder="0" 
+      style="border:0" 
+      src="https://www.google.com/maps/embed/v1/place?key=SUA_API_KEY_OPCIONAL&q=6721+Broad+St,Douglasville,GA" 
+      allowfullscreen>
     </iframe>
   </div>
 </div>
 
-<div style="background:var(--primary); color:white; padding:40px 20px; text-align:center;">
+<div class="footer">
   <h2>Fiona & Friends</h2>
   <p>(678) 401-3444</p>
+  
+  <div class="footer-links">
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Gallery</a>
+    <a href="#">Contact</a>
+  </div>
+
   <p style="opacity: 0.6; font-size: 12px; margin-top:20px;">© 2026 Fiona & Friends. Designed by Inovax.io</p>
 </div>
 
