@@ -1,259 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Premium Car Detailing Services</title>
-    <style>
-        /* CSS Reset & Base Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apex Detailing | Premium Mobile Detailing & Ceramic Coating</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
-        body {
-            background-color: #0f0f12;
-            color: #ffffff;
-            line-height: 1.6;
-        }
+<style>
+  :root { 
+    --primary: #1a1a1a; 
+    --accent: #ff3e3e; 
+    --light: #f9f9f9; 
+    --dark-card: #111111;
+  }
+  body { margin: 0; font-family: 'Poppins', sans-serif; background: #fff; color: #333; overflow-x: hidden; }
+  
+  .top-promo { background: var(--primary); color: #fff; padding: 10px; text-align: center; font-size: 13px; font-weight: 600; letter-spacing: 0.5px; }
+  .top-promo span { color: var(--accent); }
 
-        /* Navigation */
-        header {
-            background-color: rgba(15, 15, 18, 0.95);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 1px solid #222;
-        }
+  .header { padding: 15px 5%; display: flex; align-items: center; justify-content: space-between; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; background: #fff; z-index: 1000; }
+  .logo { color: var(--primary); font-size: 20px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; }
+  .logo span { color: var(--accent); }
+  .btn-call { background: var(--accent); color: #fff; padding: 8px 20px; border-radius: 20px; text-decoration: none; font-weight: bold; font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px; box-shadow: 0 4px 10px rgba(255, 62, 62, 0.3); }
 
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+  .hero { padding: 20px; }
+  .hero-card { background: var(--primary); border-radius: 30px; min-height: 450px; position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden; text-align: center; color: #fff; }
+  .hero-img { position: absolute; width: 100%; height: 100%; object-fit: cover; opacity: 0.25; }
+  .hero-text { position: relative; z-index: 2; padding: 20px; max-width: 600px; }
 
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: #ff3e3e;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
+  .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 15px; padding: 30px 20px; background: var(--light); }
+  .feat-item { text-align: center; }
+  .feat-item span { font-size: 28px; display: block; margin-bottom: 5px; }
+  .feat-item h4 { margin: 0; color: var(--primary); font-size: 13px; text-transform: uppercase; font-weight: 700; }
 
-        /* Hero Section */
-        .hero {
-            padding: 180px 20px 100px 20px;
-            text-align: center;
-            background: linear-gradient(rgba(15,15,18,0.7), #0f0f12);
-            min-height: 80vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
+  .vaccine-box { background: #fff5f5; border-left: 5px solid var(--accent); padding: 20px; margin: 20px; border-radius: 12px; }
 
-        .hero h1 {
-            font-size: 48px;
-            font-weight: 800;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            letter-spacing: -1px;
-        }
+  .service-card { border: 2px solid #eee; border-radius: 25px; padding: 25px; margin: 20px 0; text-align: center; background: #fff; transition: transform 0.3s ease; }
+  .service-card:hover { transform: translateY(-3px); }
+  .service-card.featured { background: var(--primary); color: #fff; border: none; box-shadow: 0 10px 20px rgba(0,0,0,0.15); }
+  .service-card h3 { margin-top: 0; font-size: 22px; }
+  .service-card p { color: #666; font-size: 14px; }
+  .service-card.featured p { color: #ccc; }
+  
+  .btn-book { display: inline-block; background: var(--accent); color: #fff; padding: 10px 25px; border-radius: 25px; text-decoration: none; font-weight: bold; margin-top: 15px; font-size: 14px; text-transform: uppercase; }
+  .service-card.featured .btn-book { background: #fff; color: var(--primary); }
 
-        .hero p {
-            font-size: 18px;
-            color: #aaaaaa;
-            max-width: 600px;
-            margin-bottom: 40px;
-        }
+  /* MAPA CORRIGIDO */
+  .map-wrapper { padding: 0 20px 20px 20px; }
+  .map-container { border-radius: 20px; overflow: hidden; border: 1px solid #ddd; height: 300px; background: #eee; }
 
-        /* Call To Action Button (Perfeito para embutir o Detailermade) */
-        .cta-btn {
-            background-color: #ff3e3e;
-            color: #ffffff;
-            padding: 16px 36px;
-            font-size: 18px;
-            font-weight: bold;
-            text-transform: uppercase;
-            text-decoration: none;
-            border-radius: 4px;
-            transition: background 0.3s ease;
-            box-shadow: 0 4px 15px rgba(255, 62, 62, 0.4);
-        }
-
-        .cta-btn:hover {
-            background-color: #e02f2f;
-        }
-
-        /* Services Section */
-        .services {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 80px 20px;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 32px;
-            text-transform: uppercase;
-            margin-bottom: 50px;
-            position: relative;
-        }
-
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 4px;
-            background-color: #ff3e3e;
-            margin: 10px auto 0 auto;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .service-card {
-            background-color: #16161a;
-            padding: 40px 30px;
-            border-radius: 4px;
-            border: 1px solid #222;
-            transition: transform 0.3s ease;
-        }
-
-        .service-card:hover {
-            transform: translateY(-5px);
-            border-color: #ff3e3e;
-        }
-
-        .service-card h3 {
-            font-size: 22px;
-            margin-bottom: 15px;
-            color: #ffffff;
-        }
-
-        .service-card p {
-            color: #999999;
-            font-size: 15px;
-        }
-
-        /* Features / Why Choose Us */
-        .why-us {
-            background-color: #16161a;
-            padding: 80px 20px;
-            border-top: 1px solid #222;
-            border-bottom: 1px solid #222;
-        }
-
-        .why-us-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            text-align: center;
-        }
-
-        .stat-box {
-            padding: 20px;
-            min-width: 250px;
-        }
-
-        .stat-box h2 {
-            font-size: 40px;
-            color: #ff3e3e;
-            margin-bottom: 10px;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #0f0f12;
-            text-align: center;
-            padding: 40px 20px;
-            color: #666666;
-            font-size: 14px;
-            border-top: 1px solid #1a1a1a;
-        }
-
-        /* Mobile Responsiveness */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 32px;
-            }
-            .hero p {
-                font-size: 16px;
-            }
-            .stat-box {
-                margin-bottom: 30px;
-            }
-        }
-    </style>
+  .footer { background: var(--primary); color: white; padding: 40px 20px; text-align: center; }
+  .footer h2 { text-transform: uppercase; letter-spacing: 1px; }
+  .footer h2 span { color: var(--accent); }
+  .footer-links { margin: 20px 0; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
+  .footer-links a { color: white; text-decoration: none; font-size: 14px; opacity: 0.8; font-weight: 500; }
+  .footer-links a:hover { opacity: 1; color: var(--accent); }
+</style>
 </head>
 <body>
 
-    <header>
-        <div class="nav-container">
-            <div class="logo">Apex Detailing</div>
-        </div>
-    </header>
+<div class="top-promo">✨ <span>100% Mobile Service</span> — We Bring The Showroom Shine To Your Driveway</div>
 
-    <section class="hero">
-        <h1>Showroom Shine, Right to Your Door</h1>
-        <p>Premium mobile car detailing and ceramic coating services. We bring the ultimate gloss and protection straight to your driveway.</p>
-        <a href="#book-now" class="cta-btn">Book Your Service</a>
-    </section>
+<div class="header">
+  <div class="logo">⚡ Apex<span>Detailing</span></div>
+  <a href="tel:16784013444" class="btn-call">Call Now</a>
+</div>
 
-    <section class="services">
-        <h2 class="section-title">Our Detailing Packages</h2>
-        <div class="services-grid">
-            
-            <div class="service-card">
-                <h3>Full Interior Restoration</h3>
-                <p>Deep steam cleaning, shampooing, leather treatment, and full sanitization. We make the cabin feel and smell brand new.</p>
-            </div>
+<div class="hero">
+  <div class="hero-card">
+    <img src="https://images.unsplash.com/photo-1607860108855-64acf2078ed9?q=80&w=1200" class="hero-img">
+    <div class="hero-text">
+      <h1 style="font-size: 2.5rem; margin:0; text-transform: uppercase; font-weight: 700;">Because Your Car Deserves Better</h1>
+      <p style="font-size: 16px; opacity: 0.9; margin-top: 10px;">Premium detailing and elite ceramic coatings tailored to protect your investment.</p>
+    </div>
+  </div>
+</div>
 
-            <div class="service-card">
-                <h3>Exterior Paint Correction</h3>
-                <p>Multi-stage machine polishing to eliminate swirls, light scratches, and oxidation. Restores mirror-like reflection.</p>
-            </div>
+<div class="features">
+  <div class="feat-item"><span>💎</span><h4>Ceramic Certified</h4></div>
+  <div class="feat-item"><span>🌀</span><h4>Swirl Free</h4></div>
+  <div class="feat-item"><span>⏱️</span><h4>Eco Friendly</h4></div>
+  <div class="feat-item"><span>⭐</span><h4>5-Star Rated</h4></div>
+</div>
 
-            <div class="service-card">
-                <h3>Ceramic Coating Protection</h3>
-                <p>Elite nano-ceramic layers for long-lasting hydrophobic protection, extreme gloss, and shield against UV rays.</p>
-            </div>
+<div class="vaccine-box">
+  <h3 style="margin-top:0; color:var(--accent); text-transform: uppercase; font-size: 16px; letter-spacing: 0.5px;">📢 Mobile Detailing Requirements</h3>
+  <p style="font-size: 14px; margin-bottom:0; color: #444;">For mobile on-site service, we kindly require access to a working water spigot and a standard power outlet within 50 feet of the vehicle. We take care of the rest!</p>
+</div>
 
-        </div>
-    </section>
+<div style="padding: 20px; max-width: 800px; margin: 0 auto;">
+  <h2 style="text-align:center; color:var(--primary); text-transform: uppercase; letter-spacing: 1px;">Popular Packages</h2>
+  
+  <div class="service-card">
+    <h3>Full Interior Deep Clean</h3>
+    <p>Steam sanitization, carpet shampooing, leather conditioning, and detailed vacuuming.</p>
+    <div style="font-size: 26px; font-weight: bold; color: var(--accent);">$149+</div>
+    <a href="#book-now" class="btn-book">Book Now</a>
+  </div>
+  
+  <div class="service-card featured">
+    <h3>The Ultimate Exterior Gloss</h3>
+    <p>Premium foam bath, iron decontamination, clay bar treatment, and a 1-year ceramic sealant protection.</p>
+    <div style="font-size: 26px; font-weight: bold; color: var(--accent);">$199+</div>
+    <a href="#book-now" class="btn-book">Book Now</a>
+  </div>
+</div>
 
-    <section class="why-us">
-        <div class="why-us-container">
-            <div class="stat-box">
-                <h2>100%</h2>
-                <p>Hand-Coded Performance</p>
-            </div>
-            <div class="stat-box">
-                <h2>5-Star</h2>
-                <p>Local Google Reviews</p>
-            </div>
-            <div class="stat-box">
-                <h2>Mobile</h2>
-                <p>We Come to Your Location</p>
-            </div>
-        </div>
-    </section>
+<div style="text-align: center; padding: 20px 0;">
+  <h2 style="color:var(--primary); text-transform: uppercase; letter-spacing: 1px;">Our Service Area</h2>
+  <p style="color: #666; margin-bottom: 20px;">📍 Proudly Serving Douglasville, GA & Surrounding Areas</p>
+  <div class="map-wrapper" style="max-width: 840px; margin: 0 auto;">
+    <div class="map-container">
+      <iframe 
+        width="100%" 
+        height="100%" 
+        style="border:0" 
+        loading="lazy" 
+        allowfullscreen 
+        referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3320.1776997621183!2d-84.75017242429983!3d33.75149307327179!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f526437bef3023%3A0x8963fe5dd55d7963!2s6721%20Broad%20St%2C%20Douglasville%2C%20GA%2030134%2C%20EUA!5e0!3m2!1spt-BR!2sbr!4v1714935000000!5m2!1spt-BR!2sbr">
+      </iframe>
+    </div>
+  </div>
+</div>
 
-    <footer>
-        <p>&copy; 2026 Apex Detailing. All rights reserved. Hand-Coded for Maximum Speed.</p>
-    </footer>
+<div class="footer">
+  <h2>Apex<span>Detailing</span></h2>
+  <p style="font-size: 18px; font-weight: bold; margin: 10px 0;">(678) 401-3444</p>
+  
+  <div class="footer-links">
+    <a href="#">About Us</a>
+    <a href="#">Our Services</a>
+    <a href="#">Gallery</a>
+    <a href="#">Privacy Policy</a>
+    <a href="#">Contact Us</a>
+  </div>
+
+  <p style="opacity: 0.6; font-size: 12px; margin-top:20px;">© 2026 Apex Detailing. Designed by Inovax.io</p>
+</div>
 
 </body>
 </html>
-
